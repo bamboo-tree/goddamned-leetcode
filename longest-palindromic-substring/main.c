@@ -37,10 +37,11 @@ char *longestPalindrome(char *s) {
             
             // allocate memory and return first palindrome (it's also the biggest one)
             if(isPalindrome) {
-                char *result = (char *)malloc(sizeof(char) * i);
+                char *result = (char *)malloc(sizeof(char) * (i+1));
                 for(int k = 0; k < i; k++) {
                     result[k] = s[k+j];
                 }
+                result[i] = '\0';
 
                 return result;
             }
