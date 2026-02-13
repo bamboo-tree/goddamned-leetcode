@@ -14,7 +14,7 @@ char *convert(char *s, int numRows);
 
 int main() {
 
-    char *text = "PAYPALISHIRING\0";
+    char *text = "PAYPALISHIRING";
     int numRows = 4;
     char *correctAnswer = "PINALSIGYAHRPI\0";
 
@@ -25,21 +25,31 @@ int main() {
 }
 
 char *convert(char *s, int numRows) {
+    
+    if(numRows == 1) {
+        return s;
+    }
 
     int size = 0;
     while(s[size] != '\0') {
         size++;
     }
-    printf("SIZE: %d\n", size);
 
-    
-    char *result = (char *)malloc(sizeof(char) * size);
+    if(size <= 1) {
+        return s;
+    }
+
+    char *result = (char *)malloc(sizeof(char) * (size+1));
+    result[size] = '\0';
+    int resultIndex = 0;
     int step = (numRows - 1) * 2;
 
-    int resultIndex = 0;
     for(int i = 0; i < numRows; i++) {
-        
         if(i == 0 || i == numRows-1) {
+            if(i == numRows-1 && i % 2 != 0) {
+                resultIndex--;
+            }
+
             int index = i;
             while(index + step < size) {
                 printf("%c --> %d at %d\n", s[index], index, resultIndex);
