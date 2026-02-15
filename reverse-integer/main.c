@@ -20,15 +20,14 @@ int reverse(int x) {
     long result = 0;
 
     while(x != 0) {
+        // check if multiplying is reversable, if not there is an overflow
         int temp = result * 10;
         if(temp / 10 != result) {
             return 0;
         }
 
         result *= 10;
-
         result += (x % 10);
-        printf("result: %d, x: %d\n", result, x);
         x /= 10;
     }
 
