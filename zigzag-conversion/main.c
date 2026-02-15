@@ -14,18 +14,17 @@ char *convert(char *s, int numRows);
 
 int main() {
 
-    char *text = "PAYPALISHIRING";
-    int numRows = 4;
+    char *text = "PA";
+    int numRows = 2;
     char *correctAnswer = "PINALSIGYAHRPI\0";
 
-    printf("TEXT   : %s,\nZIG-ZAG: %s,\nCORRECT: %s\n", text, convert(text, numRows), correctAnswer);
-
+    printf("\nTEXT   : %s,\nZIG-ZAG: %s,\nCORRECT: %s\n", text, convert(text, numRows), correctAnswer);
 
     return 0;
 }
 
+
 char *convert(char *s, int numRows) {
-    
     if(numRows == 1) {
         return s;
     }
@@ -35,58 +34,26 @@ char *convert(char *s, int numRows) {
         size++;
     }
 
-    if(size <= 1) {
-        return s;
-    }
-
-    char *result = (char *)malloc(sizeof(char) * (size+1));
+    char *result = (char *)malloc(sizeof(char) * (size + 1));
     result[size] = '\0';
-    int resultIndex = 0;
-    int step = (numRows - 1) * 2;
+
+    int index = 0;
 
     for(int i = 0; i < numRows; i++) {
-        if(i == 0 || i == numRows-1) {
-            if(i == numRows-1 && i % 2 != 0) {
-                resultIndex--;
+        int step = ((numRows-1)*2) - i - i;
+        printf("step: %d, %d\n", step, ((numRows-1)*2 - step));
+        for(int j = i; j < size; ) {
+            if(step != 0) {
+                printf("%c %d, ", s[j], j);
+                
+                result[index] = s[j];
+                index++;
             }
-
-            int index = i;
-            while(index + step < size) {
-                printf("%c --> %d at %d\n", s[index], index, resultIndex);
-                result[resultIndex] = s[index];
-                resultIndex++;
-                index += step;
-            }
-            printf("%c --> %d at %d\n", s[index], index, resultIndex);
-            result[resultIndex] = s[index];
-            resultIndex++;
+            j += step;
+            step = ((numRows-1) * 2) - step;
+            printf("\nupdate: %d\n", step);
         }
-        else {
-            int prevResultIndex = resultIndex;
-
-            int index = i;
-            while(index + step < size) {
-                printf("%c --> %d at %d\n", s[index], index, resultIndex);
-                result[resultIndex] = s[index];
-                resultIndex += 2;
-                index += step;
-            }
-            printf("%c --> %d at %d\n", s[index], index, resultIndex);
-            result[resultIndex] = s[index];
-            resultIndex = prevResultIndex + 1;;
-            
-            index = step - i;
-            while(index + step <= size) {
-                printf("%c --> %d at %d\n", s[index], index, resultIndex);
-                result[resultIndex] = s[index];
-                resultIndex += 2;
-                index += step;
-            }
-            printf("%c --> %d at %d\n", s[index], index, resultIndex);
-            result[resultIndex] = s[index];
-            resultIndex += 2;
-        }
-        printf("\n========\n");
+        printf("\n");
     }
 
     return result;
