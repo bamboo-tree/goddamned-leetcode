@@ -3,19 +3,10 @@
 
 char *convert(char *s, int numRows);
 
-/*
- *  PAYP  AL  ISHI  RI  NG 4
- *  >>>> <<<< >>>> <<<< >>  
- *  
- *  PINALSIGYASRPI
- *
- *  PINALSIGYAHRPI
- */
-
 int main() {
 
-    char *text = "PA";
-    int numRows = 2;
+    char *text = "PAYPALISHIRING";
+    int numRows = 4;
     char *correctAnswer = "PINALSIGYAHRPI\0";
 
     printf("\nTEXT   : %s,\nZIG-ZAG: %s,\nCORRECT: %s\n", text, convert(text, numRows), correctAnswer);
@@ -36,24 +27,20 @@ char *convert(char *s, int numRows) {
 
     char *result = (char *)malloc(sizeof(char) * (size + 1));
     result[size] = '\0';
-
     int index = 0;
 
+    int jump = (numRows - 1) * 2;
+
     for(int i = 0; i < numRows; i++) {
-        int step = ((numRows-1)*2) - i - i;
-        printf("step: %d, %d\n", step, ((numRows-1)*2 - step));
+        int step = jump - (2 * i);
         for(int j = i; j < size; ) {
             if(step != 0) {
-                printf("%c %d, ", s[j], j);
-                
                 result[index] = s[j];
                 index++;
             }
             j += step;
-            step = ((numRows-1) * 2) - step;
-            printf("\nupdate: %d\n", step);
+            step = jump - step;
         }
-        printf("\n");
     }
 
     return result;
