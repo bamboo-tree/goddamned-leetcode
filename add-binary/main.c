@@ -14,56 +14,10 @@ void printLinkedList(struct Node *head);
 
 int main()
 {
-  // input values (binary strings)
-  char *a = "1101";
-  char *b = "110";
+  char *a = "11";
+  char *b = "1";
 
-  // convert to linked lists
-  struct Node *llA = toReversedLinkedList(a);
-  struct Node *llB = toReversedLinkedList(b);
-
-  printLinkedList(llA);
-  printLinkedList(llB);
-
-  /**
-   * SOLUTION:
-   * create linked list head node and calculate its value
-   * update input linked lists
-   * create sum carry variable (overengineered solution but i like it :D)
-   * repeat the process for remaining nodes unless original linked lists and carry value are empty
-   */
-  struct Node *sumHead = (struct Node *)malloc(sizeof(struct Node));
-  sumHead->value = llA->value + llB->value;
-  sumHead->next = NULL;
-
-  llA = llA != NULL ? llA->next : NULL;
-  llB = llB != NULL ? llB->next : NULL;
-
-  int carry = (sumHead->value + 1) % 2; // if: 1 -> 0, if: 2 -> 1
-
-  struct Node *sumTemp;
-  sumTemp = sumHead;
-
-  while (llA != NULL || llB != NULL || carry == 1)
-  {
-    int aVal = llA != NULL ? llA->value : 0;
-    int bVal = llB != NULL ? llB->value : 0;
-    int colSum = aVal + bVal + carry;
-
-    struct Node *newNode = (struct Node *)malloc(sizeof(struct Node));
-    newNode->value = colSum % 2;
-    newNode->next = NULL;
-
-    sumTemp->next = newNode;
-    sumTemp = newNode;
-
-    carry = carry >= 2 ? 1 : 0;
-
-    llA = llA != NULL ? llA->next : NULL;
-    llB = llB != NULL ? llB->next : NULL;
-  }
-
-  printLinkedList(sumHead);
+  printf("%s\n", addBinary(a, b));
 
   return 0;
 }
@@ -109,4 +63,57 @@ void printLinkedList(struct Node *head)
 
 char *addBinary(char *a, char *b)
 {
+  int size = 1;
+
+  // convert to linked lists
+  struct Node *llA = toReversedLinkedList(a);
+  struct Node *llB = toReversedLinkedList(b);
+
+  struct Node *sumHead = (struct Node *)malloc(sizeof(struct Node));
+  int colSum = llA->value + llB->value;
+  sumHead->value = colSum % 2;
+  sumHead->next = NULL;
+
+  llA = llA != NULL ? llA->next : NULL;
+  llB = llB != NULL ? llB->next : NULL;
+
+  int carry = colSum >= 2 ? 1 : 0;
+
+  struct Node *sumTemp;
+  sumTemp = sumHead;
+
+  while (llA != NULL || llB != NULL || carry == 1)
+  {
+    int aVal = llA != NULL ? llA->value : 0;
+    int bVal = llB != NULL ? llB->value : 0;
+    colSum = aVal + bVal + carry;
+
+    struct Node *newNode = (struct Node *)malloc(sizeof(struct Node));
+    newNode->value = colSum % 2;
+    newNode->next = NULL;
+
+    sumTemp->next = newNode;
+    sumTemp = newNode;
+
+    carry = colSum >= 2 ? 1 : 0;
+
+    llA = llA != NULL ? llA->next : NULL;
+    llB = llB != NULL ? llB->next : NULL;
+
+    size++;
+  }
+
+  char *solution = (char *)malloc(sizeof(char) * size + 1);
+  solution[size] = '\0';
+
+  size--;
+
+  while (size >= 0)
+  {
+    solution[size] = sumHead->value + '0';
+    sumHead = sumHead->next;
+    size--;
+  }
+
+  return solution;
 }
