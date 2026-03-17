@@ -26,7 +26,7 @@ think it is more interesting this way.
 
 ==> [leetcode profile](https://leetcode.com/u/bamboo_tree/)
 
-```bash
+```
  _______________________
 < leetcode goddamnit... >
  -----------------------
