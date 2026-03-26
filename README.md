@@ -16,6 +16,8 @@ This is a collection of my leetcode problems solutions
 | String to integer atoi                         |     medium |        C |
 | Add binary                                     |       easy |        C |
 | Climbing stairs                                |       easy |        C |
+| FizzBuzz                                       |       easy |     Java |
+| Container with most water                      |     medium |     Java |
 
 Sometimes I'm just bored or want to code something but have no idea what
 project should I start. Leetcode is quite entertaining and forces me to
@@ -23,6 +25,8 @@ think how to solve a problem instead of _vibe coding_ it.
 
 Most of my solutions are written in **C**. There is not much behind it, I just
 think it is more interesting this way.
+
+_But sometimes I'm lazy or don't want to reinvent the wheel with some fancy data structures, then I use **Java** : )_
 
 ==> [leetcode profile](https://leetcode.com/u/bamboo_tree/)
 
