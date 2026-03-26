@@ -12,31 +12,22 @@ class Main{
 }
 
 class Solution{
-
   public int maxArea(int[] height) {
-    int maxArea = 0;
-    int startIndex = 0;
-    int endIndex = height.length - 1;
+    int maxArea = 0;              // absolute max area - aka solution
+    int area = 0;                 // area calculatet in each loop run
+    int start = 0;                // start index in height array - "left" border
+    int end = height.length - 1;  // end index in height array - "right" border
 
     for(int i = 0; i < height.length; i++) {
-      int startHeight = height[startIndex];
-      int endHeight = height[endIndex];
-      int validContainerHeight = 0; // smaller side of container
-      int area = 0;
-      
-      if(startHeight > endHeight) {
-        endIndex--;
-        validContainerHeight = endHeight; 
+      if(height[start] > height[end]) {
+        area = height[end] * (end - start);
+        end--;
       }
       else{
-        startIndex++;
-        validContainerHeight = startHeight;
+        area = height[start] * (end - start);
+        start++;
       }
-     
-      area = validContainerHeight * (endIndex - startIndex + 1);
       maxArea = area > maxArea ? area : maxArea;
-      System.out.printf("container borders: %d, %d\n", startHeight, endHeight);
-      System.out.printf("area             : %d\n", area);
     }
 
     return maxArea;
