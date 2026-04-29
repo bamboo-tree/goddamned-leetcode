@@ -12,10 +12,25 @@ int main() {
   return 0;
 }
 
+// int mySqrt(int x) {
+//   long lastValue = 0;
+//   while(lastValue * lastValue <= x) {
+//     lastValue += 1;
+//   }
+//   return lastValue-1;
+// }
+
 int mySqrt(int x) {
-  long lastValue = 0;
-  while(lastValue * lastValue <= x) {
-    lastValue += 1;
+  long left = 1;
+  long right = x;
+
+  while(left <= right) {
+    long mid = left + (right - left) / 2;
+
+    if (mid * mid == x) return mid;
+    if (mid * mid < x) left = mid + 1;
+    if (mid * mid > x) right = mid - 1;
   }
-  return lastValue-1;
+
+  return right;
 }
