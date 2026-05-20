@@ -21,6 +21,11 @@ This is a collection of my leetcode problems solutions
 | Find the index of the first occurrence in a string |       easy |         C | 
 | Sqrt(x)                                            |       easy |         C |
 | Single number                                      |       easy | Python, C |
+| Combine two tables                                 |       easy |     MySQL |
+| Employees earning more than their managers         |       easy |     MySQL |
+| Duplicate emails                                   |       easy |     MySQL |
+| Customers who never order                          |       easy |     MySQL |
+| Delete duplicate emails                            |       easy |     MySQL |
 
 Sometimes I'm just bored or want to code something but have no idea what
 project should I start. Leetcode is quite entertaining and forces me to
