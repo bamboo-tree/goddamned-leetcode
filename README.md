@@ -27,6 +27,7 @@ This is a collection of my leetcode problems solutions
 | Customers who never order                          |       easy |     MySQL |
 | Delete duplicate emails                            |       easy |     MySQL |
 | Missing number                                     |       easy |      Java |
+| Search insert position                             |       easy |      Java |
 
 Sometimes I'm just bored or want to code something but have no idea what
 project should I start. Leetcode is quite entertaining and forces me to
