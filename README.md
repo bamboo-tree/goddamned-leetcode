@@ -18,7 +18,7 @@ This is a collection of my leetcode problems solutions
 | Climbing stairs                                    |       easy |         C |
 | FizzBuzz                                           |       easy |      Java |
 | Container with most water                          |     medium |      Java |
-| Find the index of the first occurrence in a string |       easy |         C | 
+| Find the index of the first occurrence in a string |       easy |         C |
 | Sqrt(x)                                            |       easy |         C |
 | Single number                                      |       easy | Python, C |
 | Combine two tables                                 |       easy |     MySQL |
@@ -26,6 +26,7 @@ This is a collection of my leetcode problems solutions
 | Duplicate emails                                   |       easy |     MySQL |
 | Customers who never order                          |       easy |     MySQL |
 | Delete duplicate emails                            |       easy |     MySQL |
+| Missing number                                     |       easy |      Java |
 
 Sometimes I'm just bored or want to code something but have no idea what
 project should I start. Leetcode is quite entertaining and forces me to
