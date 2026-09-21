@@ -30,6 +30,7 @@ This is a collection of my leetcode problems solutions
 | Search insert position                             |       easy |      Java |
 | 3 Sum                                              |     medium |      Java |
 | Pascal's triangle                                  |       easy |      Java |
+| Linked list cycle                                  |       easy |      Java |
 
 Sometimes I'm just bored or want to code something but have no idea what
 project should I start. Leetcode is quite entertaining and forces me to
