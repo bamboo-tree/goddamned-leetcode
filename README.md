@@ -33,6 +33,7 @@ This is a collection of my leetcode problems solutions
 | Linked list cycle                                  |       easy |      Java |
 | Remove duplicates from sorted list                 |       easy |      Java |
 | Remove linked list elements                        |       easy |      Java |
+| Remove nth node from end of list                   |     medium |      Java |
 
 
 ==> [leetcode profile](https://leetcode.com/u/bamboo_tree/)
