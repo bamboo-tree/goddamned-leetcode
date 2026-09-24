@@ -32,6 +32,7 @@ This is a collection of my leetcode problems solutions
 | Pascal's triangle                                  |       easy |      Java |
 | Linked list cycle                                  |       easy |      Java |
 | Remove duplicates from sorted list                 |       easy |      Java |
+| Remove linked list elements                        |       easy |      Java |
 
 
 ==> [leetcode profile](https://leetcode.com/u/bamboo_tree/)
