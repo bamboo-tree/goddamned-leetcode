@@ -1,6 +1,6 @@
 # Goddamned leetcode
 
-This is a collection of my leetcode problems solutions
+This is a collection of my [leetcode](https://leetcode.com/u/bamboo_tree/) solutions
 
 ### Details
 
@@ -34,14 +34,14 @@ This is a collection of my leetcode problems solutions
 | Remove duplicates from sorted list                 |       easy |      Java |
 | Remove linked list elements                        |       easy |      Java |
 | Remove nth node from end of list                   |     medium |      Java |
+| Swap nodes in pairs                                |     medium |      Java |
 
-
-==> [leetcode profile](https://leetcode.com/u/bamboo_tree/)
+---
 
 ```
- _________________________
-< I am not a smart cow... >
- -------------------------
+ __________________________
+< Linked lists are hard... >
+ --------------------------
         \   ^__^
          \  (--)\_______
             (__)\       )\/\
