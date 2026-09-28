@@ -35,6 +35,7 @@ This is a collection of my [leetcode](https://leetcode.com/u/bamboo_tree/) solut
 | Remove linked list elements                        |       easy |      Java |
 | Remove nth node from end of list                   |     medium |      Java |
 | Swap nodes in pairs                                |     medium |      Java |
+| Intersection of two linked lists                   |       easy |      Java |
 
 ---
 
