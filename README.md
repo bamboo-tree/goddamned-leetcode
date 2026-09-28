@@ -1,6 +1,6 @@
 # Goddamned leetcode
 
-This is a collection of my [leetcode](https://leetcode.com/u/bamboo_tree/) solutions
+This is a collection of my [leetcode](https://leetcode.com/u/bamboo_tree/) solutions.
 
 ### Details
 
@@ -36,6 +36,7 @@ This is a collection of my [leetcode](https://leetcode.com/u/bamboo_tree/) solut
 | Remove nth node from end of list                   |     medium |      Java |
 | Swap nodes in pairs                                |     medium |      Java |
 | Intersection of two linked lists                   |       easy |      Java |
+| Reverse linked list                                |       easy |      Java |
 
 ---
 
