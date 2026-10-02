@@ -28,7 +28,7 @@ This is a collection of my [leetcode](https://leetcode.com/u/bamboo_tree/) solut
 | Delete duplicate emails                            |       easy |     MySQL |
 | Missing number                                     |       easy |      Java |
 | Search insert position                             |       easy |      Java |
-| 3 Sum                                              |     medium |      Java |
+| 3Sum                                               |     medium |      Java |
 | Pascal's triangle                                  |       easy |      Java |
 | Linked list cycle                                  |       easy |      Java |
 | Remove duplicates from sorted list                 |       easy |      Java |
@@ -37,6 +37,7 @@ This is a collection of my [leetcode](https://leetcode.com/u/bamboo_tree/) solut
 | Swap nodes in pairs                                |     medium |      Java |
 | Intersection of two linked lists                   |       easy |      Java |
 | Reverse linked list                                |       easy |      Java |
+| 3Sum closeset                                      |     medium |      Java |
 
 ---
 
