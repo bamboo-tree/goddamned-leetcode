@@ -38,6 +38,7 @@ This is a collection of my [leetcode](https://leetcode.com/u/bamboo_tree/) solut
 | Intersection of two linked lists                   |       easy |      Java |
 | Reverse linked list                                |       easy |      Java |
 | 3Sum closeset                                      |     medium |      Java |
+| Plus one                                           |       easy |      Java |
 
 ---
 
