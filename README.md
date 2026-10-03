@@ -39,6 +39,7 @@ This is a collection of my [leetcode](https://leetcode.com/u/bamboo_tree/) solut
 | Reverse linked list                                |       easy |      Java |
 | 3Sum closeset                                      |     medium |      Java |
 | Plus one                                           |       easy |      Java |
+| Find the difference                                |       easy |         C |
 
 ---
 
